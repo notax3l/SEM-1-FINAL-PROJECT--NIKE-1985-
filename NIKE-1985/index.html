@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- declaring html is working on the latest version-->
+<html lang="en">
+<head id="meta">
+    <title>HomePage</title><!-- staring with head--></head>
+<body>
+<!-- adding the universal header -->
+<header id="header"></header>
+<!--creating a main to have all the content  -->
+<main>
+    <section class="empty1"></section> <!--an empty section for design purposes -->
+    <section id="indexbanner"> <!--banner of index page -->
+        <h2> "FLY HIGH" </h2>
+        <h1> AIR JORDAN </h1>
+        <h2> "AIR"</h2>
+       <button class="glow-button">SHOP NOW</button> <!--adding button that directly takes us to the shop page  -->
+    </section>
+    <section class="empty2"></section> <!--empty section for styling-->
+    <section class="legacy"> <!--section to add content about legacy of air jordan -->
+        <h1> THE         <span class="airlegacy">"AIR"</span>   LEGACY </h1> <!--heading -->
+        <div class="legacy_image">
+            <img  src="img/legacyimage.jpg" alt="legacykiphoto"> <!--adding a picture -->
+
+        </div>
+        <!--giving info about the legacy by using a paragraph tag -->
+        <p>The first three Air Jordan sneakers, released between 1985 and 1988,
+            laid the foundation for one of the most iconic lines in sneaker history.
+            The Air Jordan 1, introduced in 1985, broke the mold with its bold,
+            unconventional design and defiant colorways, famously banned by the NBA
+            for not adhering to the uniform code, which only fueled its legend.
+            The 1986 Air Jordan 2 followed, marked by its premium materials and sleek,
+            minimalist aesthetic that stood in contrast to the flashy 1s, but still managed
+            to make a significant impact. Then came the Air Jordan 3 in 1988, which not only
+            introduced the now-legendary elephant print and visible air cushioning but also cemented
+            Michael Jordan's status as a cultural icon, thanks in part to its role in his first MVP
+            season and the sneaker's memorable "Jumpman" logo debut. Each release pushed
+            the boundaries of basketball shoe design and solidified the Air Jordan legacy as
+            a symbol of style and performance.
+        </p>
+    </section>
+<section class="empty3"></section> <!--for styling -->
+
+</main>
+
+<!-- adding the universal footer-->
+<div id="footer"></div>
+<!-- Link to jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Link to custom JavaScript -->
+<script src="scripts.js"></script>
+
+<script>
+   <!--using an eventlistner to make the button functional -->
+    document.querySelector('.glow-button').addEventListener('click', function() {
+        window.location.href = 'shop.html'; // Redirects to shop.html
+    });
+</script>
+
+</body>
+</html>

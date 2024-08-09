@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="meta">
+    <title>AJ-1</title>
+</head>
+<body>
+<!-- Include header -->
+<header id="header"></header>
+
+<main> <!-- main that conatins all the content-->
+    <section class="productTemplate_1"> <!-- main section insdie of the main tag-->
+        <div class="productImage_1"><!-- image of product-->
+            <img src="img/aj1.webp" alt="Image of Macintosh 128K">
+        </div>
+        <div class="productInformation"> <!-- div that contains classed about details of ther product -->
+            <p class="productName">AIR JORDAN - <span class="yearcolor">I</span> </p>
+            <p class="productDescription">
+                "Released in 1985, the Air Jordan 1 marked the beginning of a sneaker phenomenon, designed by Peter Moore for Michael Jordan's rookie season. Known for its striking silhouette and innovative features, the Air Jordan 1 combines premium leather with a high-top design for exceptional support. Its initial release was met with controversy due to its defiance of NBA uniform codes, leading to the 'Banned' moniker and boosting its legendary status. Available in various classic and modern colorways, the Air Jordan 1 remains a symbol of both athletic excellence and streetwear culture."
+            </p>
+            <p class="productPrice">$ 65</p>
+            <!-- A form that allows the user to choose their shoe size-->
+            <form class="shoes">
+                <fieldset>
+                    <legend>Select Your Size</legend>
+                    <div class="sizes">
+                        <!-- using type radio and then styling it to make it look better-->
+                        <input type="radio" id="size6" name="shoe-size" value="6">
+                        <label for="size6" class="size-label">6</label>
+
+                        <input type="radio" id="size7" name="shoe-size" value="7">
+                        <label for="size7" class="size-label">7</label>
+
+                        <input type="radio" id="size8" name="shoe-size" value="8">
+                        <label for="size8" class="size-label">8</label>
+
+                        <input type="radio" id="size9" name="shoe-size" value="9">
+                        <label for="size9" class="size-label">9</label>
+
+                        <input type="radio" id="size10" name="shoe-size" value="10">
+                        <label for="size10" class="size-label">10</label>
+
+                        <input type="radio" id="size11" name="shoe-size" value="11">
+                        <label for="size11" class="size-label">11</label>
+                    </div>
+                    <p class="size-description">Please select a size to proceed with your order.</p>
+                </fieldset>
+            </form>
+            <!-- button to add to cart ( psudo)-->
+            <a href="cart.html" id="add-to-cart" class="add-to-cart-b">Add to Cart</a>
+
+        </div>
+    </section>
+    <section class="empty3"></section> <!-- for designing -->
+</main><!-- end of main -->
+
+<!-- Include footer -->
+<div id="footer"></div>
+
+<!-- Link to jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Link to custom JavaScript -->
+<script src="scripts.js"></script>
+<!-- Load header and footer -->
+
+</body>
+</html>

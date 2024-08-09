@@ -1,0 +1,880 @@
+/*basic body styling*/
+/*NOTE: using # for id and . for classes*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #645e5e;
+}
+
+/* HEADER STYLING */
+header {
+
+    background: black;
+    padding: 10px 20px; /* Padding around the header */
+    color: #645e5e;
+    box-shadow: none; /* Remove any box-shadow */
+    z-index: 999;/* giving a random z index value*/
+    top:0; /* this will result in 0 height between the viewport and the header*/
+   /*sticky property allows the header to be at it's position at all times.*/
+   position: sticky;
+
+}
+
+/*Targeting the class that conatins the entire header content*/
+.header_div {
+
+    display: flex; /*using flex*/
+    /*centering the content*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+
+    height: 30px; /*defining the size of the */
+}
+
+.nav ul {/*basic styling of list*/
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+
+    margin-left: 20px; /*defining the space b/w items*/
+    margin-right: 20px;
+}
+
+.nav ul li a { /*styling the anchor tags that lead to different pages */
+
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all 0.5s ease; /*for smooth transitions that will happen at a rate of 0.5s*/
+    font-family: 'Anton', sans-serif; /* basic font*/
+
+}
+
+.nav ul li a:hover {/*using hover to make it look even better */
+    color:crimson; /* text color changes to this on hovering  */
+    text-shadow: 0 0 10px rgba(255,2, 0, 0.8); /*giving it a glow effect*/
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+/*INDEX PAGE STYLING*/
+#indexbanner{ /*targeting the indexbanner id */
+
+    /*basic styling based on requirnments */
+    height: 90vh;
+    background-image: url("img/contactpic.jpg"); /* setting a background image and setting it's position as desired*/
+    background-position: top 25% right 0;
+    background-size: cover;
+    display: flex; /*using display flex*/
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    flex-direction: column;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+
+}
+
+/*styling the 3 basic empty sections that I used to make it look better */
+.empty1{
+    height: 30px;
+    background: radial-gradient(circle,crimson,orangered); /*giving them a gradient and dimensions */
+}
+.empty2{
+    height: 30px;
+    background: radial-gradient(circle,crimson,orangered);
+    margin: 0;
+    padding: 0;
+
+}
+.empty3{
+    height: 24px;
+    background: radial-gradient(circle,crimson,orangered);
+}
+
+/*styling heading in the benner  */
+#indexbanner h1 {
+    /*basic styling*/
+    color: crimson;
+    font-size: 150px;
+    font-family: 'Anton', sans-serif;
+    font-weight:bolder;
+    letter-spacing: 2px; /*spacing b/w letters gets increasaed */
+    /*using a custom transition */
+    transition: transform 0.5s ease, color 0.5s ease, letter-spacing 0.5s ease; /* Transition effects for transform, color, and letter-spacing */
+    transform: scale(1); /* Initial scale */
+    margin: 0;
+}
+
+/*defining events during hovering over h1 */
+#indexbanner h1:hover {
+
+    color: #ff6347; /* slightly changes color*/
+    transform: scale(1.1) rotate(-2deg); /* slight tilt effect*/
+    letter-spacing: 8px;
+}
+
+/* basic styling*/
+#indexbanner h2{
+    color: white;
+    font-size:70px;
+    margin:0;
+}
+
+/*basic styling */
+#indexbanner h3{
+    color: white;
+}
+
+/*custom styling the shop button that is on the index page  */
+.glow-button {
+    background:transparent; /* clear background*/
+    color: #dddddd;
+    border: 2px solid crimson; /*border color */
+    padding: 22px 22px;
+    font-size: 14px;
+    cursor: pointer; /* cursor turns into a pointer*/
+    border-radius: 14px; /* Rounded corners */
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease; /* smooth transitioin*/
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow for better styling*/
+    margin: 70px 70px 70px 0;
+
+}
+
+/*styling when cursor hovered over the button */
+.glow-button:hover {
+    border-color: #fff; /* border color change*/
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.8); /* glow effect*/
+    background-color: #d00000;
+    transform: scale(1.05); /* increases the size of the button*/
+}
+
+/* styling the legacy class*/
+.legacy {
+    display: flex; /* making it a flex container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    height: 89vh;
+    padding: 0;
+    margin:0;
+
+}
+
+/*styling the h1 of legacy class */
+.legacy h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 30px; /*increasing bottom margin asper required*/
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top:2em; /* increasing the top margin*/
+    text-shadow: 2px 2px 4px rgba(180, 0, 0, 2); /* giving a subtel red shadow */
+}
+
+/* targeting the image in the legacy class that has a class called legacy_image*/
+.legacy_image {
+
+    display: flex; /*creating it a flex container */
+    margin-bottom: 20px;
+    justify-content: center; /*centering the image */
+}
+
+.legacy_image img {
+    /*setting dimensions of the image as per required layout */
+    height:390px;
+    width:480px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/*stylinf the paragraph content  */
+.legacy p {
+
+    font-family: 'Georgia', serif; /* classic look font*/
+    font-size: 1.130em;
+    line-height: 1.6; /*defining line height */
+    color: #ffffff;
+    margin: 0 auto 5em; /* custom margin seetings*/
+    max-width: 800px; /* giving the p tag a mac width */
+    padding: 0 10px;
+
+}
+
+
+/*FOOTER STYLING*/
+/*Targeting footer*/
+
+.footer {
+    background-color: #000; /*setting a background color */
+    color: #fff; /* text color */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer_div {
+    /*customizing the div that conatins the content of footer */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+/* styling the footer section*/
+.footer_section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer_section h2 {
+    border-bottom: 2px solid #fff; /*underline */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer_section p, .footer_section ul { /*targeting 2 classes at the same time */
+    margin: 0;
+    padding: 0;
+    list-style: none; /*removing the dots */
+}
+
+.footer_section ul {
+    padding: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 10px;
+}
+
+.footer_section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease; /*for smooth transitions */
+}
+
+/*targeting when the anchor tags in the footer are hovered upton */
+.footer_section ul li a:hover {
+    color:crimson; /* change in colour */
+    text-shadow: 0 0 10px rgba(255,2, 0, 0.8); /* glow */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer_bottom { /*targeting the  footer bottom that has the copywrite and stuff */
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444; /* minimal border for differentiaing*/
+    margin-top: 20px;
+}
+
+
+/*SHOP PAGE STYLING*/
+/* focusing on the hero banner of this page */
+#heroshop {
+    background-image: url("img/shopbannercustom.jpg"); /* adding a background */
+    background-repeat: no-repeat;
+    background-size: cover; /* covers the entire element */
+    background-position: center; /* center positioning*/
+    width: 100%;
+    height: 30vh;
+    display: flex; /*flex container */
+    justify-content: center;
+    align-items: center;
+}
+#heroshop h1 { /*focusing the text in the hero banner */
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 70px;
+    color: crimson;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for better readability */
+    margin: 0; /* Removes default margins for a cleaner look */
+    padding: 20px; /* Adds padding for better spacing */
+    text-align: center; /* Centers the text */
+    line-height: 1.2; /* Improves readability with a slightly increased line height */
+}
+
+
+/* Shop page product styling */
+.featured-products {
+    background: black;
+    padding: 20px;
+    animation: fade-up 0.4s;
+
+}
+
+.featured-products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center aligning the articles */
+    gap: 20px; /* adding space between the articles */
+}
+
+.featured-products .product-list a {
+    display: block; /* using display type bloack */
+    text-decoration: none; /* removes underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.featured-products .product-list article {
+    /*styling the articles  */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /*giving a box shadow */
+    transition: box-shadow 0.3s ease;  /* for smooth transition*/
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* hiding any overflowing content*/
+    box-sizing: border-box;
+}
+
+.featured-products .product-list article:hover {
+    /* when the articles are hovered upton*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);  /*they get slight shadows */
+}
+
+.featured-products .product-list article img {
+    width: 100%;  /*setting dimensions of the images of the shoes */
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.featured-products .product-list article h3,
+.featured-products .product-list article p {
+    margin: 10px 0;
+}
+
+/* details button styling */
+.featured-products .product-list article .view-details {
+    display: inline-block;  /* display inline-block as required */
+    padding: 12px 18px;
+    background:black;
+    color: #fff;  /*color of text */
+    text-decoration: none;  /* removing extra decoration*/
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;  /* custom tranformations for the button*/
+    margin-top: 10px;
+    cursor: pointer; /* cursor to pointer */
+    align-self: flex-start; /* align button to the left of thr article */
+}
+
+.featured-products .product-list article .view-details:hover {
+    background: linear-gradient(45deg, #ffa500, #dc143c); /* a linear gradient when hovering*/
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* adding a slight shadow*/
+}
+
+
+/* Style for the anchor tags that has the articles in it  */
+.featured-products .product-list a {
+    display: block;  /* display bloack as requireed*/
+    text-decoration: none; /* Removes underlines */
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for lift and shadow */
+}
+
+/* Hover effect for the anchor tags */
+.featured-products .product-list a:hover {
+    transform: translateY(-5px); /* gets lifted up by a small factor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to create depth */
+}
+
+
+/*PRODUCT PAGE STYLING*/
+
+
+.productImage {
+    /*This code is for the second and the third product page*/
+    /*Basic styling for the image */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productInformation {
+    /* basic styling of the information of the product, as requireed */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2em;
+    padding: 0 2.5em 0 2.5em;;
+}
+
+.productName {
+    /* Basic styling of the name of the product*/
+    letter-spacing: .1em;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+}
+
+.productDescription {
+    font-size: 20px;
+    letter-spacing: .1em;
+    line-height: 1.1em;
+    color: wheat;
+}
+
+.productTemplate_3 {
+    /* basic styling*/
+    height: 50%;
+    display: flex;
+    padding: 5em 4em 1em 4em;
+    background: black;
+
+}
+.productTemplate_1 {
+    height: 50%;
+    display: flex;
+    background: black;
+}
+.productTemplate_2 {
+    height: 50%;
+    display: flex;
+    background: black;
+}
+.productImage_1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:55em;
+}
+.productImage_2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30em;
+}
+.productDescription_3 {
+font-size: 20px;
+    letter-spacing: .1em;
+    line-height: 1.1em;
+    margin-top: 6em;
+    margin-bottom: 5em;
+    color: wheat;
+}
+
+/* styling the spanned part of the line*/
+.yearcolor {
+    color: crimson;
+
+    font-weight: bold;
+    font-size: 70px;
+}
+/* styling the price */
+.productPrice {
+    font-size: 27px;
+
+    color: crimson;
+    font-style: italic;
+    font-weight: bold;
+}
+.airlegacy{
+    color: crimson;
+}
+
+/* creating a custom keyframe transition to make the shop page feel even better */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/* SHOE SIZE STYLING*/
+/* Styling for the shoe size selection */
+.shoes{ /*class that conatins all the shoe sizing elements */
+    margin-top: 20px;
+}
+
+.shoes fieldset {
+    border: none; /*removing borders*/
+    padding: 0;
+}
+
+.shoes legend {
+    /*custom styling to match with the theme of the code */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.sizes {
+    display: flex; /*flex container*/
+    gap: 10px; /*gap between the sizes*/
+    flex-wrap: wrap;
+}
+
+.sizes input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.sizes .size-label {
+    /*styling the lables */
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sizes input[type="radio"]:checked + .size-label {
+    /*when either of thr lable is checked, it gets a crimson color */
+    background-color: crimson; /* Highlight selected size */
+    border-color: crimson;
+}
+
+.size-description {
+    margin-top: 10px;
+    color: white;
+}
+
+
+/* CART STYLING */
+/* Cart Page Styling */
+.cart { /* section that contains the main content of the cart page*/
+
+    background: black;
+    color: white;
+    max-width: 1200px; /*defininig a maximun width */
+    margin: auto;
+    padding: 2em 2em 5em 2em;
+
+}
+
+.cart h1 { /*styling cart jheading*/
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5em;
+    color: crimson;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.cart-items {
+    display: flex; /*using flex as required*/
+    flex-direction: column;
+    gap: 1em; /*gap b/w the items  */
+}
+
+.cart_item {
+    /*styling the item that is inside of the class*/
+    display: flex;
+    background: #333;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+.cart_item img {
+    /*targeting the image of the chosen shoe*/
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1em;
+}
+/*styling the basic infromation required */
+.cart_info {
+    flex: 1;
+}
+
+.cart_name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.cart_price {
+    font-size: 1.2em;
+    color: crimson;
+}
+
+.cart-summary {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/*styling the checkout button*/
+.checkout-button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 1em;
+    transition: background-color 0.3s ease;
+}
+/*when the checkout button is hovered upon*/
+.checkout-button:hover {
+    background-color: darkred;
+}
+
+
+
+/*styling for the cart stuff inside of the product page*/
+/* Styling for Size and Quantity Selectors */
+.form-label {
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    font-size: 16px; /* Font size */
+    color: #fff; /* White text color */
+    margin: 0.5em 0; /* Space above and below labels */
+}
+
+.form-select,
+.form-input {
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    font-size: 16px; /* Font size */
+    color: #333; /* Dark text color */
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5em; /* Padding inside input/select */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Max width to prevent stretching */
+    margin: 0.5em 0; /* Space around inputs/selects */
+}
+
+.form-input {
+    width: auto; /* Adjust width for number input */
+}
+
+/* Styling for Add to Cart Button */
+.add-to-cart-b {
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75em 1.5em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    margin-top: 1em;
+}
+
+.add-to-cart-b:hover {
+    background-color: #d00000;
+    transform: scale(1.05); /* sslightly enlarge on hover */
+}
+
+.add-to-cart-b:focus,
+.add-to-cart-b:active {
+    outline: none; /* Removes default outline */
+    background-color: #b00000;
+}
+
+.cart_main{
+    background: black; /* giving black background color*/
+}
+
+/* ABOUT US PAGE STYLING */
+.about_us {
+    background-image: url("img/jordanfinal.jpg"); /* background image*/
+    color: white;
+    /* required dimensions*/
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    /* positioning the */
+    background-position: top 25% left 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about_us h1 { /* styling heading*/
+    font-size: 2.5em;
+    font-family: 'Anton', sans-serif;
+    color: crimson;
+    margin-bottom: 1em;
+}
+
+.about_details { /*styling the details  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.about_text {
+/* basic styling of text*/
+    max-width: 800px;
+    text-align: left;
+}
+
+.about_text h2 {
+    font-size: 2em;
+    color: crimson; /* custom color for h2*/
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+/* Basic styling for the rest as per requirnment*/
+.about_text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.about_text ul {
+    list-style: disc;
+    margin: 1em 0;
+    padding-left: 20px;
+}
+
+.about_text ul li {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.about-back{
+    background: black; /* setting up the background color */
+}
+
+
+/* STYLING CONTACT US PAGE*/
+.contact-us {
+    padding: 2rem;
+    background-image: url("img/contactfinal.webp");/* custom background */
+    text-align: center;  /*centre aligning */
+    /*background image styling  */
+    background-position: top 25% right 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.contact-us h1 {
+    font-size: 3rem;
+    color: crimson;  /*crimson h1 */
+    margin-bottom: 1rem;
+}
+/*Rest is basic styling, similar to about page */
+.contact_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact_text {
+    max-width: 600px;
+    background: #fff; /* White background for contrast */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* slight shadow effect*/
+}
+
+.contact_text    p {
+    margin: 0.5rem 0;
+}
+
+.contact_text a {
+    color: crimson;
+    text-decoration: none;
+}
+
+.contact_text a:hover {
+    text-decoration: underline;
+}
+.emptyspace{ /* using some empty space to align stuff as wanted*/
+    margin: 5em;
+}
+
+
+/* RESPONSIVE INEDX PAGE */
+/* Responsive Styles */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product-list article {
+        width: 100%;
+    }
+
+    .productTemplate_1, .productTemplate_2, .productTemplate_3 {
+        flex-direction: column;
+    }
+
+    .productImage_1, .productImage {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .productInformation {
+        flex: none;
+        width: 100%;
+    }
+
+    .size-options {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .product-list article {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .view-details, .checkout-button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin-bottom: 10px;
+    }
+}
